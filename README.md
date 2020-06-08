@@ -1,12 +1,12 @@
-# Uni Application Path
+﻿# Uni Application Path
 
 データを保存できるディレクトリのパスを管理するクラス
 
 ## 使用例
 
 ```cs
+using Kogane;
 using System.IO;
-using UniApplicationPath;
 using UnityEngine;
 
 public class Example : MonoBehaviour

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace UniApplicationPath
+namespace Kogane
 {
 	/// <summary>
 	/// デフォルトのプラットフォームにおけるディレクトリのパスを返すインターフェイス

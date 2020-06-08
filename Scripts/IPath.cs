@@ -1,4 +1,4 @@
-﻿namespace UniApplicationPath
+﻿namespace Kogane
 {
 	/// <summary>
 	/// ディレクトリのパスを返すインターフェイス

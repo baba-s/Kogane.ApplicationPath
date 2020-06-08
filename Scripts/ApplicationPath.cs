@@ -1,4 +1,4 @@
-﻿namespace UniApplicationPath
+﻿namespace Kogane
 {
 	/// <summary>
 	/// <para>データを保存できるディレクトリのパスを管理するクラス</para>

@@ -2,7 +2,7 @@
 
 using UnityEngine;
 
-namespace UniApplicationPath
+namespace Kogane
 {
 	/// <summary>
 	/// Android におけるディレクトリのパスを返すインターフェイス
