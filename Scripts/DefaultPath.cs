@@ -1,23 +1,23 @@
 ﻿using UnityEngine;
 
-namespace Kogane
+namespace Kogane.Internal
 {
-	/// <summary>
-	/// デフォルトのプラットフォームにおけるディレクトリのパスを返すインターフェイス
-	/// </summary>
-	internal sealed class DefaultPath : IPath
-	{
-		//================================================================================
-		// プロパティ
-		//================================================================================
-		/// <summary>
-		/// 永続的にデータを保存できるディレクトリのパスを返します
-		/// </summary>
-		public string PersistentDataPath => Application.persistentDataPath;
+    /// <summary>
+    /// デフォルトのプラットフォームにおけるディレクトリのパスを返すインターフェイス
+    /// </summary>
+    internal sealed class DefaultPath : IPath
+    {
+        //================================================================================
+        // プロパティ
+        //================================================================================
+        /// <summary>
+        /// 永続的にデータを保存できるディレクトリのパスを返します
+        /// </summary>
+        string IPath.PersistentDataPath => Application.persistentDataPath;
 
-		/// <summary>
-		/// 一時的にデータを保存できるディレクトリのパスを返します
-		/// </summary>
-		public string TemporaryCachePath => Application.temporaryCachePath;
-	}
+        /// <summary>
+        /// 一時的にデータを保存できるディレクトリのパスを返します
+        /// </summary>
+        string IPath.TemporaryCachePath => Application.temporaryCachePath;
+    }
 }

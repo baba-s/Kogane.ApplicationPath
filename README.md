@@ -1,4 +1,4 @@
-﻿# Uni Application Path
+﻿# Kogane Application Path
 
 データを保存できるディレクトリのパスを管理するクラス
 
