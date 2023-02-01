@@ -1,5 +1,6 @@
 ﻿#if UNITY_EDITOR || UNITY_ANDROID
 
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Kogane.Internal
@@ -7,6 +8,7 @@ namespace Kogane.Internal
     /// <summary>
     /// Android におけるディレクトリのパスを返すインターフェイス
     /// </summary>
+    [UsedImplicitly]
     internal sealed class AndroidPath : IPath
     {
         //================================================================================

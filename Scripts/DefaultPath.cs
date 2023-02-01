@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿using JetBrains.Annotations;
+using UnityEngine;
 
 namespace Kogane.Internal
 {
     /// <summary>
     /// デフォルトのプラットフォームにおけるディレクトリのパスを返すインターフェイス
     /// </summary>
+    [UsedImplicitly]
     internal sealed class DefaultPath : IPath
     {
         //================================================================================
