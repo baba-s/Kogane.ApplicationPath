@@ -12,6 +12,12 @@ namespace Kogane.Internal
     internal sealed class AndroidPath : IPath
     {
         //================================================================================
+        // 変数
+        //================================================================================
+        private string m_persistentDataPathCache;
+        private string m_temporaryCachePathCache;
+
+        //================================================================================
         // プロパティ
         //================================================================================
         /// <summary>
@@ -21,10 +27,15 @@ namespace Kogane.Internal
         {
             get
             {
+                if ( m_persistentDataPathCache != null ) return m_persistentDataPathCache;
+
                 using var player   = new AndroidJavaClass( "com.unity3d.player.UnityPlayer" );
                 using var activity = player.GetStatic<AndroidJavaObject>( "currentActivity" );
                 using var file     = activity.Call<AndroidJavaObject>( "getFilesDir" );
-                return file == null ? string.Empty : file.Call<string>( "getAbsolutePath" );
+
+                m_persistentDataPathCache = file == null ? string.Empty : file.Call<string>( "getAbsolutePath" );
+
+                return m_persistentDataPathCache;
             }
         }
 
@@ -35,10 +46,15 @@ namespace Kogane.Internal
         {
             get
             {
+                if ( m_temporaryCachePathCache != null ) return m_temporaryCachePathCache;
+
                 using var player   = new AndroidJavaClass( "com.unity3d.player.UnityPlayer" );
                 using var activity = player.GetStatic<AndroidJavaObject>( "currentActivity" );
                 using var file     = activity.Call<AndroidJavaObject>( "getCacheDir" );
-                return file == null ? string.Empty : file.Call<string>( "getAbsolutePath" );
+
+                m_temporaryCachePathCache = file == null ? string.Empty : file.Call<string>( "getAbsolutePath" );
+
+                return m_temporaryCachePathCache;
             }
         }
     }
